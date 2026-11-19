@@ -2,24 +2,33 @@
 
 A local Python pipeline that compares a PDF resume with a pasted job description and returns matching qualifications, missing evidence, and revision suggestions. Group: Ryan Kropac, Vincent Wang, Emiliano Gutierrez.
 
-On the computer where this project was created, `start-on-this-computer.bat` uses the already available Codex Python runtime, so no Python package installation is needed. If the app is already running, open http://127.0.0.1:8765 instead. That convenience launcher is machine-specific; other computers should use the portable setup below.
+## Run the app (Windows)
 
-## Free setup (Windows)
+Requires [Python 3.10 or newer](https://www.python.org/downloads/windows/) and [Ollama](https://ollama.com/download/windows). Both are free.
 
-Requires Python 3.10+ and [Ollama](https://ollama.com/download). No paid API, account, subscription, or hosted deployment is needed. Model inference uses your computer's memory and CPU/GPU. The first download needs internet; subsequent local reviews can run offline.
-
-Open a terminal in this folder:
+1. Download the repository (**Code → Download ZIP**) and extract it.
+2. Open the extracted folder containing `app.py` in **desktop VS Code**. Select **Terminal → New Terminal**.
+3. Run these commands once:
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\python -m pip install -r requirements.txt
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ollama pull qwen2.5:3b
-.venv\Scripts\python app.py
 ```
 
-Open http://127.0.0.1:8765 in your browser. Keep Ollama running (start its app, or run `ollama serve` in another terminal). After setup, `start.bat` starts the Python app. To stop it, press Ctrl+C.
+4. Launch **Ollama from the Windows Start menu** and leave it running. No separate Ollama terminal is needed. In the VS Code terminal, start the app:
 
-On macOS/Linux use `.venv/bin/python` instead of `.venv\Scripts\python`.
+```powershell
+.\.venv\Scripts\python.exe app.py
+```
+
+5. Open **http://127.0.0.1:8765** in your browser. Upload a PDF resume, paste a job description, and click **Review my resume**.
+
+Keep the terminal and Ollama running while using the app. Press **Ctrl+C** in the terminal to stop it.
+
+**Later runs:** launch the Ollama app from the Start menu and double-click `start.bat`, then open the same browser address. No setup commands are needed again.
+
+The app runs locally; GitHub's web editor cannot run it. If `py` or `ollama` is not recognized after installation, restart VS Code.
 
 ## Three-minute demonstration
 
