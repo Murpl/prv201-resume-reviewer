@@ -2,6 +2,8 @@
 
 A local Python pipeline that compares a PDF resume with a pasted job description and returns matching qualifications, missing evidence, and revision suggestions. Group: Ryan Kropac, Vincent Wang, Emiliano Gutierrez.
 
+**** DESIGN DOCUMENT IS THE M3-DESIGN.PDF FILE
+
 ## Run the app (Windows)
 
 Requires [Python 3.10 or newer](https://www.python.org/downloads/windows/) and [Ollama](https://ollama.com/download/windows). Both are free.
