@@ -1,0 +1,121 @@
+{
+  "qualifications": [
+    {
+      "requirement": "Python for data cleaning.",
+      "job_quote": "Python for data cleaning.",
+      "resume_quote": "",
+      "status": "missing_evidence",
+      "suggestion": "If you have this qualification, add a truthful, specific example. Otherwise, treat it as a development opportunity: Python for data cleaning."
+    },
+    {
+      "requirement": "SQL for querying relational data.",
+      "job_quote": "SQL for querying relational data.",
+      "resume_quote": "Used SQL queries to combine three tables for a course project.",
+      "status": "matched",
+      "suggestion": "For the job requirement \"SQL for querying relational data.\", make this existing evidence easier to find: \"Used SQL queries to combine three tables for a course project.\". Clarify your own role and the project context; include a measurable result only if you can verify it."
+    },
+    {
+      "requirement": "Git for version control and collaboration.",
+      "job_quote": "Git for version control and collaboration.",
+      "resume_quote": "Collaborated with four classmates using Git for version control.",
+      "status": "matched",
+      "suggestion": "For the job requirement \"Git for version control and collaboration.\", make this existing evidence easier to find: \"Collaborated with four classmates using Git for version control.\". Clarify your own role and the project context; include a measurable result only if you can verify it."
+    },
+    {
+      "requirement": "Strong communication skills to present findings.",
+      "job_quote": "Strong communication skills to present findings.",
+      "resume_quote": "Presented findings to classmates, demonstrating communication skills.",
+      "status": "matched",
+      "suggestion": "For the job requirement \"Strong communication skills to present findings.\", make this existing evidence easier to find: \"Presented findings to classmates, demonstrating communication skills.\". Clarify your own role and the project context; include a measurable result only if you can verify it."
+    },
+    {
+      "requirement": "Tableau for dashboards.",
+      "job_quote": "Tableau for dashboards.",
+      "resume_quote": "",
+      "status": "missing_evidence",
+      "suggestion": "If you have this qualification, add a truthful, specific example. Otherwise, treat it as a development opportunity: Tableau for dashboards."
+    },
+    {
+      "requirement": "AWS experience for cloud-based analytics.",
+      "job_quote": "AWS experience for cloud-based analytics.",
+      "resume_quote": "",
+      "status": "missing_evidence",
+      "suggestion": "If you have this qualification, add a truthful, specific example. Otherwise, treat it as a development opportunity: AWS experience for cloud-based analytics."
+    }
+  ],
+  "warnings": [],
+  "mode": "local",
+  "model": "qwen2.5:3b",
+  "elapsed_seconds": 35.014,
+  "notice": "Missing evidence is not proof of a missing skill. Quotes are checked for presence, not semantic correctness. Review suggestions before use.",
+  "counts": {
+    "matched": 3,
+    "missing_evidence": 3,
+    "uncertain": 0
+  },
+  "pipeline_seconds": 35.016,
+  "fixture": "samples/resume-simple.pdf + samples/job.txt",
+  "expected_qualification_labels": {
+    "Python": "matched",
+    "SQL": "matched",
+    "Git": "matched",
+    "communication": "matched",
+    "Tableau": "missing_evidence",
+    "AWS": "missing_evidence"
+  },
+  "fixture_comparison": [
+    {
+      "skill": "Python",
+      "expected": "matched",
+      "predicted": "missing_evidence",
+      "correct": false
+    },
+    {
+      "skill": "SQL",
+      "expected": "matched",
+      "predicted": "matched",
+      "correct": true
+    },
+    {
+      "skill": "Git",
+      "expected": "matched",
+      "predicted": "matched",
+      "correct": true
+    },
+    {
+      "skill": "communication",
+      "expected": "matched",
+      "predicted": "matched",
+      "correct": true
+    },
+    {
+      "skill": "Tableau",
+      "expected": "missing_evidence",
+      "predicted": "missing_evidence",
+      "correct": true
+    },
+    {
+      "skill": "AWS",
+      "expected": "missing_evidence",
+      "predicted": "missing_evidence",
+      "correct": true
+    }
+  ],
+  "fixture_correct": 5,
+  "fixture_total": 6,
+  "pdf_extraction_cases": [
+    {
+      "file": "resume-simple.pdf",
+      "all_expected_skills_extracted": true
+    },
+    {
+      "file": "resume-columns.pdf",
+      "all_expected_skills_extracted": true
+    },
+    {
+      "file": "resume-two-pages.pdf",
+      "all_expected_skills_extracted": true
+    }
+  ],
+  "evaluation_note": "Synthetic smoke test only. Human review of semantic correctness and recommendation relevance is required; these results do not establish M2 accuracy targets."
+}

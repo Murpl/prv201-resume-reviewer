@@ -1,0 +1,18 @@
+test_blank_and_encrypted_pdf (test_reviewer.ReviewTests.test_blank_and_encrypted_pdf) ... ok
+test_empty_and_oversize (test_reviewer.ReviewTests.test_empty_and_oversize) ... ok
+test_fabricated_evidence_downgraded (test_reviewer.ReviewTests.test_fabricated_evidence_downgraded) ... ok
+test_fabricated_job_rejected (test_reviewer.ReviewTests.test_fabricated_job_rejected) ... ok
+test_invalid_pdf (test_reviewer.ReviewTests.test_invalid_pdf) ... EOF marker not found
+ok
+test_known_matches_and_gaps (test_reviewer.ReviewTests.test_known_matches_and_gaps) ... ok
+test_malformed_model_output (test_reviewer.ReviewTests.test_malformed_model_output) ... ok
+test_missing_evidence_advice_conditional (test_reviewer.ReviewTests.test_missing_evidence_advice_conditional) ... ok
+test_model_failure_explained (test_reviewer.ReviewTests.test_model_failure_explained) ... ok
+test_negation_not_a_match (test_reviewer.ReviewTests.test_negation_not_a_match) ... ok
+test_sample_layouts (test_reviewer.ReviewTests.test_sample_layouts) ... ok
+test_word_boundaries (test_reviewer.ReviewTests.test_word_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.018s
+
+OK

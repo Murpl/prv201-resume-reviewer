@@ -1,0 +1,6 @@
+Alex Morgan | Fictional student resume
+Education: B.S. Computer Science, expected May 2027.
+Projects: Built a Python script to clean survey data and summarize results.
+Used SQL queries to combine three tables for a course project.
+Collaborated with four classmates using Git for version control.
+Presented findings to classmates, demonstrating communication skills.

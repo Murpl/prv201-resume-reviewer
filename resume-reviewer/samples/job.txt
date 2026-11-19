@@ -1,0 +1,9 @@
+Data Analyst Intern - fictional evaluation posting
+Required qualifications:
+Python for data cleaning.
+SQL for querying relational data.
+Git for version control and collaboration.
+Strong communication skills to present findings.
+Preferred qualifications:
+Tableau for dashboards.
+AWS experience for cloud-based analytics.

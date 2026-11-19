@@ -1,0 +1,8 @@
+Executed November 19, 2026 using Playwright with headless Microsoft Edge.
+PASS: PDF upload and extracted text preview.
+PASS: Offline demo review produced six qualification cards.
+PASS: 390-pixel mobile viewport without horizontal overflow.
+PASS: Empty resume produced a visible error.
+PASS: No browser JavaScript errors.
+Screenshots: interface-desktop.png and interface-mobile.png.
+This browser check used demo mode; actual LLM execution is recorded separately in local-trace.json.

@@ -1,0 +1,72 @@
+{
+  "qualifications": [
+    {
+      "requirement": "Python for data cleaning.",
+      "job_quote": "Python for data cleaning.",
+      "resume_quote": "",
+      "suggestion": "Manually review this job requirement and supply a truthful supporting example only if you have one: Python for data cleaning.",
+      "status": "uncertain"
+    },
+    {
+      "requirement": "SQL for querying relational data.",
+      "job_quote": "SQL for querying relational data.",
+      "resume_quote": "",
+      "suggestion": "Manually review this job requirement and supply a truthful supporting example only if you have one: SQL for querying relational data.",
+      "status": "uncertain"
+    },
+    {
+      "requirement": "Git for version control and collaboration.",
+      "job_quote": "Git for version control and collaboration.",
+      "resume_quote": "",
+      "suggestion": "Manually review this job requirement and supply a truthful supporting example only if you have one: Git for version control and collaboration.",
+      "status": "uncertain"
+    },
+    {
+      "requirement": "Strong communication skills to present findings.",
+      "job_quote": "Strong communication skills to present findings.",
+      "resume_quote": "",
+      "suggestion": "Manually review this job requirement and supply a truthful supporting example only if you have one: Strong communication skills to present findings.",
+      "status": "uncertain"
+    }
+  ],
+  "warnings": [
+    "Downgraded a claim with unverifiable resume evidence.",
+    "Downgraded a claim with unverifiable resume evidence.",
+    "Downgraded a claim with unverifiable resume evidence.",
+    "Downgraded a claim with unverifiable resume evidence."
+  ],
+  "mode": "local",
+  "model": "qwen2.5:1.5b",
+  "elapsed_seconds": 15.993,
+  "notice": "Missing evidence is not proof of a missing skill. Quotes are checked for presence, not semantic correctness. Review suggestions before use.",
+  "counts": {
+    "matched": 0,
+    "missing_evidence": 0,
+    "uncertain": 4
+  },
+  "pipeline_seconds": 15.995,
+  "fixture": "samples/resume-simple.pdf + samples/job.txt",
+  "expected_qualification_labels": {
+    "Python": "matched",
+    "SQL": "matched",
+    "Git": "matched",
+    "communication": "matched",
+    "Tableau": "missing_evidence",
+    "AWS": "missing_evidence"
+  },
+  "pdf_extraction_cases": [
+    {
+      "file": "resume-simple.pdf",
+      "all_expected_skills_extracted": true
+    },
+    {
+      "file": "resume-columns.pdf",
+      "all_expected_skills_extracted": true
+    },
+    {
+      "file": "resume-two-pages.pdf",
+      "all_expected_skills_extracted": true
+    }
+  ],
+  "evaluation_note": "Synthetic smoke test only. Human review of semantic correctness and recommendation relevance is required; these results do not establish M2 accuracy targets."
+}

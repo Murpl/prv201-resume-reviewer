@@ -1,0 +1,28 @@
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const path = require('path');
+(async()=>{
+ const browser = await chromium.launch({channel:'msedge',headless:true});
+ const page=await browser.newPage({viewport:{width:1365,height:1000}});
+ page.setDefaultTimeout(200000);
+ const mode=process.argv.includes('--local')?'local':'demo';
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:8765');
+ await page.locator('#sample').click();
+ await page.locator('#resume').filter({visible:true}).waitFor();
+ await page.waitForFunction(()=>document.getElementById('resume').value.includes('Alex'));
+ await page.locator('#pdf').setInputFiles(path.resolve('samples/resume-simple.pdf'));
+ await page.waitForFunction(()=>!document.getElementById('run').disabled && document.getElementById('resume').value.includes('Python'));
+ await page.locator('#mode').selectOption(mode);
+ await page.locator('#run').click();
+ await page.locator('#output').waitFor({state:'visible'});
+ if(await page.locator('.result').count()!==6)throw Error('Expected six qualification cards');
+ await page.screenshot({path:`evidence/interface-${mode}-desktop.png`,fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile horizontal overflow');
+ await page.screenshot({path:`evidence/interface-${mode}-mobile.png`,fullPage:true});
+ await page.locator('#resume').fill('');await page.locator('#run').click();
+ await page.locator('#error').waitFor({state:'visible'});
+ if(errors.length)throw Error(errors.join('\n'));
+ console.log(`PASS: PDF upload, ${mode} review, six cards, mobile layout, empty-input error, no browser errors.`);
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

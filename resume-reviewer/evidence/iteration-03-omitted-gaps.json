@@ -1,0 +1,67 @@
+{
+  "qualifications": [
+    {
+      "requirement": "Python for data cleaning.",
+      "job_quote": "Python for data cleaning.",
+      "resume_quote": "Built a Python script to clean survey data and summarize results.",
+      "status": "matched",
+      "suggestion": "For the job requirement \"Python for data cleaning.\", make this existing evidence easier to find: \"Built a Python script to clean survey data and summarize results.\". Clarify your own role and the project context; include a measurable result only if you can verify it."
+    },
+    {
+      "requirement": "SQL for querying relational data.",
+      "job_quote": "SQL for querying relational data.",
+      "resume_quote": "Used SQL queries to combine three tables for a course project.",
+      "status": "matched",
+      "suggestion": "For the job requirement \"SQL for querying relational data.\", make this existing evidence easier to find: \"Used SQL queries to combine three tables for a course project.\". Clarify your own role and the project context; include a measurable result only if you can verify it."
+    },
+    {
+      "requirement": "Git for version control and collaboration.",
+      "job_quote": "Git for version control and collaboration.",
+      "resume_quote": "Collaborated with four classmates using Git for version control.",
+      "status": "matched",
+      "suggestion": "For the job requirement \"Git for version control and collaboration.\", make this existing evidence easier to find: \"Collaborated with four classmates using Git for version control.\". Clarify your own role and the project context; include a measurable result only if you can verify it."
+    },
+    {
+      "requirement": "Strong communication skills to present findings.",
+      "job_quote": "Strong communication skills to present findings.",
+      "resume_quote": "Presented findings to classmates, demonstrating communication skills.",
+      "status": "matched",
+      "suggestion": "For the job requirement \"Strong communication skills to present findings.\", make this existing evidence easier to find: \"Presented findings to classmates, demonstrating communication skills.\". Clarify your own role and the project context; include a measurable result only if you can verify it."
+    }
+  ],
+  "warnings": [],
+  "mode": "local",
+  "model": "qwen2.5:1.5b",
+  "elapsed_seconds": 7.971,
+  "notice": "Missing evidence is not proof of a missing skill. Quotes are checked for presence, not semantic correctness. Review suggestions before use.",
+  "counts": {
+    "matched": 4,
+    "missing_evidence": 0,
+    "uncertain": 0
+  },
+  "pipeline_seconds": 7.973,
+  "fixture": "samples/resume-simple.pdf + samples/job.txt",
+  "expected_qualification_labels": {
+    "Python": "matched",
+    "SQL": "matched",
+    "Git": "matched",
+    "communication": "matched",
+    "Tableau": "missing_evidence",
+    "AWS": "missing_evidence"
+  },
+  "pdf_extraction_cases": [
+    {
+      "file": "resume-simple.pdf",
+      "all_expected_skills_extracted": true
+    },
+    {
+      "file": "resume-columns.pdf",
+      "all_expected_skills_extracted": true
+    },
+    {
+      "file": "resume-two-pages.pdf",
+      "all_expected_skills_extracted": true
+    }
+  ],
+  "evaluation_note": "Synthetic smoke test only. Human review of semantic correctness and recommendation relevance is required; these results do not establish M2 accuracy targets."
+}
